@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=false">
+<title>场地预定--中山火炬公共文化服务</title>
+<meta name="keywords" content="中山火炬公共文化服务,文化活动,文体活动,文化馆,图书馆,博物馆,广场文化,公园文化,公共艺术,地方特色文化,戏剧表演,体育场地">
+<meta name="description" content="化时代">
+<link href="css/mmenu.css" rel="stylesheet" type="text/css">
+<link href="css/global.css" rel="stylesheet" type="text/css">
+<link href="css/mobiscroll.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<!-- 页头 -->
+<div id="head" class="global_width">
+  <a class="headIco" id="ico_menu" href="#menu"><i class="VMiddle"></i></a>
+  <a class="headIco" id="ico_back" title="返回上一页" onclick="javascript:history.go(-1);"><i class="VMiddle"></i></a>
+  <div id="pageTitle">场地预定</div> 
+</div>
+
+<div class="global_width" id="globalForm">
+ <form action="#">
+    <table width="100%" border="0" bordercolor="#000" frame="hsides" cellspacing="0" cellpadding="0" class="tb">
+      <tr>
+        <td width="80" align="right"><span>预订场地</span></td>
+        <td>英雄传说搏击主题馆</td>
+      </tr>
+      <tr>
+        <td align="right"><span>预订时间</span></td>
+        <td><input name="dueDate" type="text" id="dueDate" class="getdate"></td>
+      </tr>
+      <tr>
+        <td align="right" valign="top"><span>选择时间</span></td>
+        <td>
+          <a class="selectBut" rel="timeInterval">10:00-12:00</a><a class="selectBut active" rel="timeInterval">14:00-16:00</a><a class="selectBut" rel="timeInterval">18:00-20:00</a>
+          <input type="hidden" id="timeInterval" name="timeInterval">
+        </td>
+      </tr>
+    </table>
+    <table width="100%" border="0" bordercolor="#000" frame="hsides" cellspacing="0" cellpadding="0" class="tb">
+      <tr>
+        <td colspan="2" class="highlight">预订人：请如实填写预订人信息，入场将凭身份证实名入场</td>
+      </tr>
+      <tr>
+        <td width="80" align="right"><span>预订人</span></td>
+        <td><input type="text" name="name" id="name" placeholder="请输入真实姓名"></td>
+      </tr>
+      <tr>
+        <td align="right"><span>手机号码</span></td>
+        <td><input type="text" name="phone" id="phone" placeholder="请输入个人手机号码"></td>
+      </tr>
+      <tr>
+        <td align="right"><span>身份证</span></td>
+        <td>
+          <input type="text" id="IDNumber" name="IDNumber" placeholder="请输入身份证">
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2"><input name="readed" type="radio">我已认真阅读<a href="Notice.html" class="blue">预订须知</a></td>
+      </tr>
+    </table>
+    <p><input type="submit" value="立即预定" class="btn1"></p>
+  </form>
+</div>
+
+<!--导航菜单-->
+<nav id="menu" class="hide">
+  <ul>
+    <li><a href="index.html">文体活动</a>
+      <ul>
+        <li><a href="index.html">文体活动首页</a></li>
+        <li><a href="theater.html">戏剧表演</a></li>
+        <li><a href="sports.html">体育赛事</a></li>
+      </ul>
+    </li>
+    <li><a href="#">便民服务</a>
+        <ul>
+            <li><a href="publicService.html">公共服务</a></li>
+            <li><a href="about.html">关于我们</a></li>
+            <li><a href="#">公益培训</a></li>
+            <li><a href="survey.html">在线调查</a></li>
+        </ul>
+    </li>
+    <li><a href="#">福利来了</a>
+      <ul>
+        <li><a href="coupons.html">我要抢券</a></li>
+        <li><a href="culturalPro.html">文化产品</a></li>
+        <li><a href="loginChoose.html">会员登录</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+</body>
+<script type="text/javascript" src="scripts/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="scripts/mmenu.min.js"></script>
+<script type="text/javascript" src="scripts/global.js"></script>
+<script type="text/javascript" src="scripts/mobiscroll.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  /*时间*/
+  $('.selectBut.active').each(function() {
+    var targetInput = $('#'+$(this).attr('rel'));
+	targetInput.val($(this).html());
+  });
+  
+  $('.selectBut').click(function(index, element) {
+    $(this).addClass('active').siblings().removeClass('active'); 
+	var targetInput = $('#'+$(this).attr('rel'));
+	targetInput.val($(this).html());
+  });
+ 
+  /*日期选择*/
+  var now = new Date();
+  $('.getdate').val(now.getFullYear()+'-'+[now.getMonth()+1]+'-'+now.getDate());
+  $('.getdate').mobiscroll().date({
+	  theme: 'android-holo-light',
+	  lang: 'zh',
+	  display: 'modal',
+	  mode: 'scroller',
+	  //headerText: false,
+	  showNow: true,
+	  nowText: '今天',
+	  dateFormat: 'yy-mm-dd',
+	  minDate: new Date(2015, 10, 12),  // 根据开放日设定日期区间，月份要减1
+      maxDate: new Date(2015, 11, 21)
+  });
+  
+});
+</script>
+</html>

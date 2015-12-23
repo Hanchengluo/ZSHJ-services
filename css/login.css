@@ -1,0 +1,13 @@
+/*登录注册*/
+.global_form{ font-size:1.2em;padding:1em;}
+.global_form input[type="text"],.global_form input[type="password"]{ width:100%; font-size:1.2em; line-height:240%; height:2.4em; margin:1em auto 0.5em auto; padding:0 0 0 0.5em; box-sizing:border-box; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; background:#fff; border:#d7d7d7 1px solid; color:#666; border-radius:0.2em;}
+.global_form input[type="text"].row2,.global_form input[type="password"].row2{ width:48%;}
+.global_form input[type="submit"]{width:100%; font-size:1.5em; line-height:220%; height:2.2em; margin:1em auto;box-sizing:border-box; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; background:#1F97ED; color:#fff; border:none; border-radius:0.2em;}
+.global_form input[type="submit"].disabled{ background:#cbcbcb; color:#fff;}
+a.btn_form{ display:inline-block; width:100%; font-size:1.2em; text-align:center; line-height:240%; height:2.4em; margin:1em auto 0.5em auto; background:#32a9ec; color:#fff; border-radius:0.2em;}
+a.btn_form.row2{ width:48%;}
+
+/*成功提示*/
+#success{ text-align:center; padding-top:2em; font-size:1.2em;}
+#success h1,h2,h3,h4{ font-weight:normal;}
+#success h2{ color:#3f9b1b;}

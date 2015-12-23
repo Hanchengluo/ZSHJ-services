@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=false">
+<title>投票页面--中山火炬公共文化服务</title>
+<meta name="keywords" content="中山火炬公共文化服务,文化活动,文体活动,文化馆,图书馆,博物馆,广场文化,公园文化,公共艺术,地方特色文化,戏剧表演,体育场地">
+<meta name="description" content="化时代">
+<link href="css/mmenu.css" rel="stylesheet" type="text/css">
+<link href="css/global.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<!-- 页头 -->
+<div id="head" class="global_width">
+  <a class="headIco" id="ico_menu" href="#menu"><i class="VMiddle"></i></a>
+  <a class="headIco" id="ico_back" title="返回上一页" onclick="javascript:history.go(-1);"><i class="VMiddle"></i></a>
+  <div id="pageTitle">投票页面</div> 
+</div>
+
+
+<div class="global_width2" id="survey">
+  <div id="survey_pic"><img src="pictures/surveyPic.jpg" /></div>
+  <div class="gray"><span class="floatR">时间：2015/12/09</span>145866人投票</div>
+  <p>公益培训调查结果统计如下：</p>
+  <dl id="surveyResults">
+    <dt><span>17%</span>舞蹈培训</dt>
+    <dd><a rel="17%"></a></dd>
+    <dt><span>10%</span>音乐培训</dt>
+    <dd><a rel="10%"></a></dd>
+    <dt><span>3%</span>棋艺培训</dt>
+    <dd><a rel="3%"></a></dd>
+    <dt><span>18%</span>书法培训</dt>
+    <dd><a rel="18%"></a></dd>
+    <dt><span>30%</span>绘画培训</dt>
+    <dd><a rel="30%"></a></dd>
+    <dt><span>22%</span>电脑培训</dt>
+    <dd><a rel="22%"></a></dd>
+  </dl>
+</div>
+
+<!--导航菜单-->
+<nav id="menu" class="hide">
+  <ul>
+    <li><a href="index.html">文体活动</a>
+      <ul>
+        <li><a href="index.html">文体活动首页</a></li>
+        <li><a href="theater.html">戏剧表演</a></li>
+        <li><a href="sports.html">体育赛事</a></li>
+      </ul>
+    </li>
+    <li><a href="#">便民服务</a>
+        <ul>
+            <li><a href="publicService.html">公共服务</a></li>
+            <li><a href="about.html">关于我们</a></li>
+            <li><a href="#">公益培训</a></li>
+            <li><a href="survey.html">在线调查</a></li>
+        </ul>
+    </li>
+    <li><a href="#">福利来了</a>
+      <ul>
+        <li><a href="coupons.html">我要抢券</a></li>
+        <li><a href="culturalPro.html">文化产品</a></li>
+        <li><a href="loginChoose.html">会员登录</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+</body>
+<script type="text/javascript" src="scripts/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="scripts/mmenu.min.js"></script>
+<script type="text/javascript" src="scripts/global.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $('#surveyResults').find('dd').each(function() {
+    $(this).children('a').css({'width':$(this).children('a').attr('rel')});
+  });
+});
+</script>
+</html>

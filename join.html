@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=false">
+<title>加盟报名--中山火炬公共文化服务</title>
+<meta name="keywords" content="中山火炬公共文化服务,文化活动,文体活动,文化馆,图书馆,博物馆,广场文化,公园文化,公共艺术,地方特色文化,戏剧表演,体育场地">
+<meta name="description" content="化时代">
+<link href="css/mmenu.css" rel="stylesheet" type="text/css">
+<link href="css/global.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<!-- 页头 -->
+<div id="head" class="global_width">
+  <a class="headIco" id="ico_menu" href="#menu"><i class="VMiddle"></i></a>
+  <a class="headIco" id="ico_back" title="返回上一页" onclick="javascript:history.go(-1);"><i class="VMiddle"></i></a>
+  <div id="pageTitle">加盟报名</div> 
+</div>
+
+<div class="global_width" id="globalForm">
+ <form action="applySuccess.html" method="post">
+    <table width="100%" border="0" bordercolor="#000" frame="hsides" cellspacing="0" cellpadding="0" class="tb">
+      <tr>
+        <td width="80" align="right"><span>您的姓名</span></td>
+        <td><input type="text" name="name" id="name" placeholder="请输入真实姓名"></td>
+      </tr>
+      <tr>
+        <td align="right"><span>手机号码</span></td>
+        <td><input type="text" name="phone" id="phone" placeholder="请输入个人手机号码"></td>
+      </tr>
+      <tr>
+        <td align="right"><span>验证码</span></td>
+        <td><input type="text" name="code" id="code" placeholder="请输入验证码" class="row2">
+        <img src="pictures/code.jpg" class="code" />
+        </td>
+      </tr>
+      <tr>
+        <td align="right"><span>联系邮箱</span></td>
+        <td><input type="text" name="email" id="email" placeholder="请输入验证码"></td>
+      </tr>
+      <tr>
+        <td align="right"><span>性   别</span></td>
+        <td>
+            <input type="radio" name="gender" value="male" id="gender_1" checked>男性&nbsp;
+            <input name="gender" type="radio" id="gender_0" value="Female">女性 
+         </td>
+      </tr>
+      <tr>
+        <td align="right"><span>身份证号</span></td>
+        <td><input type="text" name="IDNumber" id="IDNumber" placeholder="请输入个人身份证号"></td>
+      </tr>
+      <tr>
+        <td align="right"><span>联系地址</span></td>
+        <td><textarea name="address" rows="4" id="address"></textarea><br><br></td>
+      </tr>
+    </table>
+    
+    <table width="100%" border="0" bordercolor="#000" frame="hsides" cellspacing="0" cellpadding="0" class="tb">
+      <tr>
+        <td width="80" align="right"><span>公司名称</span></td>
+        <td><input type="text" name="company" id="company" placeholder="请填写营业执照上的公司全称"></td>
+      </tr>
+      <tr>
+        <td align="right"><span>城市</span></td>
+        <td><input type="text" name="city" id="city" placeholder="请输入城市"></td>
+      </tr>
+      <tr>
+        <td align="right"><span>区域</span></td>
+        <td><input type="text" name="area" id="area" placeholder="请输入区域"></td>
+      </tr>
+       <tr>
+        <td align="right" valign="top"><span>公司地址</span></td>
+        <td><textarea name="company_address" rows="4" id="company_address" placeholder="请输入公司真实地址"></textarea><br><br></td>
+      </tr>
+      <tr>
+        <td align="right"><span>门店电话</span></td>
+        <td>
+            <input type="text" name="storePhone" id="storePhone" placeholder="请输入门店电话">
+        </td>
+      </tr>
+      <tr>
+        <td align="right" valign="top"><span>营业执照片</span></td>
+        <td>
+          <div id="queue"></div>
+          <input id="file_upload" name="file_upload" type="file" multiple><a href="javascript:$('#file_upload').uploadifive('upload')" class="uploadBtn">上传照片</a>
+        </td>
+      </tr>
+     
+    </table>
+    
+    <p><input type="submit" value="提　交" class="btn1"></p>
+  </form>
+</div>
+
+<!--导航菜单-->
+<nav id="menu" class="hide">
+  <ul>
+    <li><a href="index.html">文体活动</a>
+      <ul>
+        <li><a href="index.html">文体活动首页</a></li>
+        <li><a href="theater.html">戏剧表演</a></li>
+        <li><a href="sports.html">体育赛事</a></li>
+      </ul>
+    </li>
+    <li><a href="#">便民服务</a>
+        <ul>
+            <li><a href="publicService.html">公共服务</a></li>
+            <li><a href="about.html">关于我们</a></li>
+            <li><a href="#">公益培训</a></li>
+            <li><a href="survey.html">在线调查</a></li>
+        </ul>
+    </li>
+    <li><a href="#">福利来了</a>
+      <ul>
+        <li><a href="coupons.html">我要抢券</a></li>
+        <li><a href="culturalPro.html">文化产品</a></li>
+        <li><a href="loginChoose.html">会员登录</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+</body>
+<script type="text/javascript" src="scripts/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="scripts/mmenu.min.js"></script>
+<script type="text/javascript" src="scripts/global.js"></script>
+<script type="text/javascript" src="scripts/jquery.uploadifive.min.js"></script>
+<script>
+  
+  /*图片上传*/
+  $(function() {
+	  $('#file_upload').uploadifive({
+		  'auto'             : false,
+		  'buttonText'       : '选择证件',
+		  'height'           : 'auto',
+		  'width'            : '30%',
+		  'fileSizeLimit'    : '2000KB',
+		  'multi'            : false,//设置值为false时，一次只能选中一个文件。
+		  'fileTypeExts'     : '*.gif; *.jpg; *.png',
+		  'uploader'         : '/uploadify.aspx',//指定服务器端上传处理文件
+		  'queueID'          : 'queue',
+		  //'checkScript'      : 'check-exists.aspx',
+		  //'uploadScript'     : 'uploadifive.aspx',
+	  });
+  });
+</script>
+</html>
