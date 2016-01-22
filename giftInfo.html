@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=false">
-<title>订票详情--中山火炬公共文化服务</title>
+<title>积分兑换详情--中山火炬公共文化服务</title>
 <meta name="keywords" content="中山火炬公共文化服务,文化活动,文体活动,文化馆,图书馆,博物馆,广场文化,公园文化,公共艺术,地方特色文化,戏剧表演,体育场地">
 <meta name="description" content="化时代">
 <link href="css/mmenu.css" rel="stylesheet" type="text/css">
@@ -15,61 +15,37 @@
 <div id="head" class="global_width">
   <a class="headIco" id="ico_menu" href="#menu"><i class="VMiddle"></i></a>
   <a class="headIco" id="ico_back" title="返回上一页" onclick="javascript:history.go(-1);"><i class="VMiddle"></i></a>
-  <div id="pageTitle">订票详情</div>
+  <div id="pageTitle">兑换详情</div>
 </div>
 
 <div class="global_width2" id="posi">
-  <a href="culturalPro.html">文化产品</a> &gt; <a href="ticket.html">网上订票</a> <span class="curr">&gt; 孟京辉戏剧作品《琥珀》广州站</span>
+  <a href="gift.html">积分兑换</a><span class="curr">&gt; 雷蛇高端定制游戏手柄</span>
 </div>
 
 <div class="global_width2 box">
-  <div id="ticketInfo_pic"><img src="pictures/ticket1.jpg"/></div>
+  <div id="ticketInfo_pic"><img src="pictures/giftPic3.jpg"/></div>
   <div id="ticketInfo_cs">
-    <h2>孟京辉戏剧作品《琥珀》广州站</h2>
-    <h3>2016/01/23-2016/01/24<br>
-      广州友谊剧院
-    </h3>
-    <a class="btnB">授受预定中</a><br>
-    <span class="highlight">￥180-￥1280</span>
+    <h2 style="margin-top: 0;">雷蛇高端定制游戏手柄</h2>
+    <a class="btnB">授受兑换中</a><br>
+    <span class="highlight">10000积分</span>
   </div>
   <div class="blank"></div>
 </div>
 
 <div class="global_width" id="globalForm">
+<table width="100%" border="0" bordercolor="#000" frame="hsides" cellspacing="0" cellpadding="0" class="tb">
+      <tr>
+        <td colspan="2" class="highlight" style="text-align: center;">
+          <img src="pictures/giftinfo.jpg" alt=""></td>
+      </tr>
+</table>
  <form action="#">
     <table width="100%" border="0" bordercolor="#000" frame="hsides" cellspacing="0" cellpadding="0" class="tb">
       <tr>
-        <td width="80" align="right"><span>预订表演</span></td>
-        <td>孟京辉戏剧作品《琥珀》广州站</td>
+        <td colspan="2" class="highlight">兑换人：请如实填写预订人信息，兑换凭手机号码兑换</td>
       </tr>
       <tr>
-        <td align="right"><span>预订日期</span></td>
-        <td>
-          <a class="selectBut active" rel="dueDate">2015/12/24</a><a class="selectBut" rel="dueDate">2015/12/25</a>
-          <input name="dueDate" type="hidden" id="dueDate">
-        </td>
-      </tr>
-      <tr>
-        <td align="right" valign="top"><span>选择时间</span></td>
-        <td>
-          <a class="selectBut" rel="timeInterval">10:00-12:00</a><a class="selectBut active" rel="timeInterval">14:00-16:00</a><a class="selectBut" rel="timeInterval">18:00-20:00</a>
-          <input type="hidden" id="timeInterval" name="timeInterval">
-        </td>
-      </tr>
-      <tr>
-        <td align="right" valign="top"><span>选择票位</span></td>
-        <td>
-          <a class="selectBut active" rel="seat">180</a><a class="selectBut" rel="seat">280</a><a class="selectBut" rel="seat">380</a><a class="selectBut" rel="seat">480</a><a class="selectBut" rel="seat">680</a><a class="selectBut" rel="seat">880</a><a class="selectBut" rel="seat">1080</a><a class="selectBut" rel="seat">1280</a>
-          <input type="hidden" id="seat" name="seat">
-        </td>
-      </tr>
-    </table>
-    <table width="100%" border="0" bordercolor="#000" frame="hsides" cellspacing="0" cellpadding="0" class="tb">
-      <tr>
-        <td colspan="2" class="highlight">预订人：请如实填写预订人信息，入场将凭身份证实名入场</td>
-      </tr>
-      <tr>
-        <td width="80" align="right"><span>预订人</span></td>
+        <td width="80" align="right"><span>兑换人</span></td>
         <td><input type="text" name="name" id="name" placeholder="请输入真实姓名"></td>
       </tr>
       <tr>
@@ -77,16 +53,12 @@
         <td><input type="text" name="phone" id="phone" placeholder="请输入个人手机号码"></td>
       </tr>
       <tr>
-        <td align="right"><span>身份证</span></td>
-        <td>
-          <input type="text" id="IDNumber" name="IDNumber" placeholder="请输入身份证">
-        </td>
-      </tr>
-      <tr>
-        <td colspan="2"><input name="readed" type="radio">我已认真阅读<a href="Notice.html" class="blue">预订须知</a></td>
+        <td colspan="2"><input name="readed" type="radio">我已认真阅读<a href="Notice.html" class="blue">兑换须知</a></td>
       </tr>
     </table>
-    <p><input type="submit" value="立即预定" class="btn1"></p>
+    <p>
+      <a class="btn1" href="giftOrder.html">立即兑换</a>
+    </p>
   </form>
 </div>
 
@@ -127,13 +99,13 @@ $(document).ready(function(){
   /*时间*/
   $('.selectBut.active').each(function() {
     var targetInput = $('#'+$(this).attr('rel'));
-	targetInput.val($(this).html());
+  targetInput.val($(this).html());
   });
 
   $('.selectBut').click(function(index, element) {
     $(this).addClass('active').siblings().removeClass('active');
-	var targetInput = $('#'+$(this).attr('rel'));
-	targetInput.val($(this).html());
+  var targetInput = $('#'+$(this).attr('rel'));
+  targetInput.val($(this).html());
   });
 
 

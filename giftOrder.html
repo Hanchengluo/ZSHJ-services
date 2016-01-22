@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=false">
+<title>积分兑换详情--中山火炬公共文化服务</title>
+<meta name="keywords" content="中山火炬公共文化服务,文化活动,文体活动,文化馆,图书馆,博物馆,广场文化,公园文化,公共艺术,地方特色文化,戏剧表演,体育场地">
+<meta name="description" content="化时代">
+<link href="css/mmenu.css" rel="stylesheet" type="text/css">
+<link href="css/global.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<!-- 页头 -->
+<div id="head" class="global_width">
+  <a class="headIco" id="ico_menu" href="#menu"><i class="VMiddle"></i></a>
+  <a class="headIco" id="ico_back" title="返回上一页" onclick="javascript:history.go(-1);"><i class="VMiddle"></i></a>
+  <div id="pageTitle">兑换码</div>
+</div>
+
+<div class="global_width2" id="posi">
+  <a href="gift.html">积分兑换</a><span class="curr">&gt; 雷蛇高端定制游戏手柄</span>
+</div>
+<div class="global_width" id="globalForm">
+ <form action="#">
+    <table width="100%" border="0" bordercolor="#000" frame="hsides" cellspacing="0" cellpadding="0" class="tb">
+      <tr>
+        <td colspan="2" class="highlight">
+          请妥善保管你的兑换码，请勿告诉他人，到指定的兑换地点向工作人员出示兑换码</td>
+      </tr>
+      <tr>
+        <td width="80" align="right"><span>兑换码：</span></td>
+        <td><span>SHWK2016122161233</span></td>
+      </tr>
+      <tr>
+        <td width="80" align="right"><span>兑换人：</span></td>
+        <td><span>黄先生</span></td>
+      </tr>
+      <tr>
+        <td align="right"><span>手机号码：</span></td>
+        <td><span>18924918891</span></td>
+      </tr>
+      <tr>
+        <td align="right"><span>兑换状态：</span></td>
+        <td><span class="giftState">等待兑换</span>
+        <!-- <span class="giftState-gray">已兑换</span> -->
+        </td>
+      </tr>
+    </table>
+  </form>
+</div>
+
+<!--导航菜单-->
+<nav id="menu" class="hide">
+  <ul>
+    <li><a href="index.html">文体活动</a>
+      <ul>
+        <li><a href="index.html">文体活动首页</a></li>
+        <li><a href="theater.html">戏剧表演</a></li>
+        <li><a href="sports.html">体育赛事</a></li>
+      </ul>
+    </li>
+    <li><a href="#">便民服务</a>
+        <ul>
+            <li><a href="publicService.html">公共服务</a></li>
+            <li><a href="about.html">关于我们</a></li>
+            <li><a href="#">公益培训</a></li>
+            <li><a href="survey.html">在线调查</a></li>
+        </ul>
+    </li>
+    <li><a href="#">福利来了</a>
+      <ul>
+        <li><a href="coupons.html">我要抢券</a></li>
+        <li><a href="culturalPro.html">文化产品</a></li>
+        <li><a href="loginChoose.html">会员登录</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+</body>
+<script type="text/javascript" src="scripts/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="scripts/mmenu.min.js"></script>
+<script type="text/javascript" src="scripts/global.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  /*时间*/
+  $('.selectBut.active').each(function() {
+    var targetInput = $('#'+$(this).attr('rel'));
+  targetInput.val($(this).html());
+  });
+
+  $('.selectBut').click(function(index, element) {
+    $(this).addClass('active').siblings().removeClass('active');
+  var targetInput = $('#'+$(this).attr('rel'));
+  targetInput.val($(this).html());
+  });
+
+
+});
+</script>
+</html>

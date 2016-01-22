@@ -14,7 +14,7 @@
 <!-- 页头 -->
 <div id="head" class="global_width">
   <a class="headIco" id="ico_menu" href="#menu"><i class="VMiddle"></i></a>
-  <div id="pageTitle">戏剧表演</div> 
+  <div id="pageTitle">戏剧表演</div>
 </div>
 
 <!--戏剧表演-->
@@ -58,7 +58,9 @@
   </dl>
 </div>
 <div class="global_width">
-  <div id="loadMore" class="global_width" data-page="1"><img src="images/loading.gif" id="loading"/><span id="load_span">加载更多</span></div>
+  <form  action="">
+    <div id="loadMore" class="global_width" data-page="1"><img src="images/loading.gif" id="loading"/><span id="load_span">加载更多</span></div>
+  </form>
 </div>
 
 <!--导航菜单-->
@@ -89,31 +91,30 @@
   </ul>
 </nav>
 
-
 </body>
 <script type="text/javascript" src="scripts/jquery-2.1.4.min.js"></script>
 <script type="text/javascript" src="scripts/mmenu.min.js"></script>
 <script type="text/javascript" src="scripts/global.js"></script>
-<script type="text/javascript"> 
+<script type="text/javascript">
 /*ajax加载数据*/
 var page;
 var content = $('#News');
 var nodata = false;
 var iCategoryId = $.getUrlParam('iCategoryId'); //取得分类ID
-$(function(){ 
+$(function(){
   $('#loadMore').bind('click',function(){
 	if(nodata){return false};
 	page = parseInt($(this).attr('data-page'))+1;//页数
 	$('#loading').fadeIn('fast');
 	$('#load_span').html('数据加载中...');
     ajaxRead();
-  }); 
-  
-  function ajaxRead(){ 
+  });
+
+  function ajaxRead(){
   var Thehtml='';
   var ajaxurl='theater_ajax.asp?iCategoryId='+iCategoryId+'&page='+page;//请求数据的页面
-  $.ajax({ 
-    type: 'POST',  
+  $.ajax({
+    type: 'POST',
 	url: ajaxurl,
 	async: false,
 	datatype: 'json',
@@ -128,11 +129,11 @@ $(function(){
 		  $('#loading').fadeOut('fast',function(){$("#load_span").empty().html('没有数据了！')});
 		  nodata = true;
 		}
-	}, 
+	},
 	error: function(err) { $("#load_span").empty().html('数据请求失败！')}
-  }); 
+  });
   }
-  
-}) 
+
+})
 </script>
 </html>

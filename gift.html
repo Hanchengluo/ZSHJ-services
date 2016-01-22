@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=false">
+<title>积分兑换产品--中山火炬公共文化服务</title>
+<meta name="keywords" content="中山火炬公共文化服务,文化活动,文体活动,文化馆,图书馆,博物馆,广场文化,公园文化,公共艺术,地方特色文化,戏剧表演,体育场地">
+<meta name="description" content="中山火炬公共文化服务">
+<link href="css/mmenu.css" rel="stylesheet" type="text/css">
+<link href="css/global.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<!-- 页头 -->
+<div id="head" class="global_width">
+  <a class="headIco" id="ico_menu" href="#menu"><i class="VMiddle"></i></a>
+  <a class="headIco" id="ico_back" title="返回上一页" onclick="javascript:history.go(-1);"><i class="VMiddle"></i></a>
+  <div id="pageTitle">积分兑换</div>
+</div>
+
+<!--分类-->
+<div class="tit global_width"><em></em>
+  <a href="#" class="curr">礼品</a><a href="#">门票</a><a href="#">优惠券</a>
+</div>
+<div class="News global_width" id="News">
+  <dl>
+    <a href="giftInfo.html"><i></i></a>
+    <dt><img src="pictures/giftPic3.jpg" /></dt>
+    <dd>
+      <p>雷蛇高端定制游戏手柄</p>
+      <i class="time"> <em class="gift">10000</em>积分</i>
+    </dd>
+  </dl>
+  <dl>
+    <a href="giftInfo.html"><i></i></a>
+    <dt><img src="pictures/giftPic2.jpg" /></dt>
+    <dd>
+      <p>腾达无限路由</p>
+      <i class="time"><em class="gift">10000</em>积分</i>
+    </dd>
+  </dl>
+  <dl>
+    <a href="giftInfo.html"><i></i></a>
+    <dt><img src="pictures/giftPic3.jpg" /></dt>
+    <dd>
+      <p>雷蛇高端定制游戏手柄</p>
+      <i class="time"><em class="gift">10000</em>积分</i>
+    </dd>
+  </dl>
+  <dl>
+    <a href="giftInfo.html"><i></i></a>
+    <dt><img src="pictures/giftPic2.jpg" /></dt>
+    <dd>
+      <p>腾达无限路由</p>
+      <i class="time"><em class="gift">10000</em>积分</i>
+    </dd>
+  </dl>
+  <dl>
+    <a href="giftInfo.html"><i></i></a>
+    <dt><img src="pictures/giftPic1.jpg" /></dt>
+    <dd>
+      <p>凤凰牌山地车</p>
+      <i class="time"><em class="gift">10000</em>积分</i>
+    </dd>
+  </dl>
+</div>
+<div class="blank"></div>
+<div class="global_width">
+  <div id="loadMore" class="global_width" data-page="1"><img src="images/loading.gif" id="loading"/><span id="load_span">加载更多</span></div>
+</div>
+
+<!--导航菜单-->
+<nav id="menu" class="hide">
+  <ul>
+    <li><a href="index.html">文体活动</a>
+      <ul>
+        <li><a href="index.html">文体活动首页</a></li>
+        <li><a href="theater.html">戏剧表演</a></li>
+        <li><a href="sports.html">体育赛事</a></li>
+      </ul>
+    </li>
+    <li><a href="#">便民服务</a>
+        <ul>
+            <li><a href="publicService.html">公共服务</a></li>
+            <li><a href="about.html">关于我们</a></li>
+            <li><a href="#">公益培训</a></li>
+            <li><a href="survey.html">在线调查</a></li>
+        </ul>
+    </li>
+    <li><a href="#">福利来了</a>
+      <ul>
+        <li><a href="coupons.html">我要抢券</a></li>
+        <li><a href="culturalPro.html">文化产品</a></li>
+        <li><a href="loginChoose.html">会员登录</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+</body>
+<script type="text/javascript" src="scripts/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="scripts/mmenu.min.js"></script>
+<script type="text/javascript" src="scripts/global.js"></script>
+<script type="text/javascript">
+/*ajax加载数据*/
+var page;
+var content = $('#ticket');
+var nodata = false;
+var iCategoryId = $.getUrlParam('iCategoryId'); //取得分类ID
+$(function(){
+  $('#loadMore').bind('click',function(){
+  if(nodata){return false};
+  page = parseInt($(this).attr('data-page'))+1;//页数
+  $('#loading').fadeIn('fast');
+  $('#load_span').html('数据加载中...');
+    ajaxRead();
+  });
+
+  function ajaxRead(){
+  var Thehtml='';
+  var ajaxurl='ticket_ajax.asp?iCategoryId='+iCategoryId+'&page='+page;//请求数据的页面
+  $.ajax({
+    type: 'POST',
+  url: ajaxurl,
+  async: false,
+  datatype: 'json',
+  success:function(data){
+    if(data!='' && data!='0' && data!=null && data.replace(/\s/g,"")!=null){
+    content.append(data);
+    $('#loadMore').attr('data-page',page);
+    //alert($('#loadMore').attr('data-page'));
+    $('#loading').fadeOut('fast');
+    $('#load_span').html('加载更多');
+    }else{
+      $('#loading').fadeOut('fast',function(){$("#load_span").empty().html('没有数据了！')});
+      nodata = true;
+    }
+  },
+  error: function(err) { $("#load_span").empty().html('数据请求失败！')}
+  });
+  }
+
+})
+</script>
+</html>
