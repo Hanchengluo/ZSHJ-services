@@ -20,11 +20,10 @@
 </div>
 
 <div class="global_width" >
-  <div class="sign-date"><p id="signintime">2016/01/25</p></div>
+  <div class="sign-date"><p id="signintime">2016-1-26</p></div>
   <div class="ui-col">
     <a class="u-signin-btn" id="u-signin-btn" href="javascript:void(0)">签到</a>
   </div>
-  <div class="ui-col"><p class="sign-clock">00:13:30</p></div>
   <h1 class="l-sign-tit">今日签到</h1>
   <div class="l-sign-li">
     <div class="userimg"><img src="pictures/Avatar1.jpg"  /></div>
@@ -94,8 +93,20 @@
 
 
 </body>
+<script language="javascript" type="text/javascript">
+  //js获取日期
+  function time()
+  {
+    var now= new Date();
+    var year=now.getFullYear();
+    var month=now.getMonth();
+    var date=now.getDate();
+  //写入相应id
+   document.getElementById("signintime").innerHTML=year+"年"+(month+1)+"月"+date+"日";
+  }
+
+  </script>
 <script type="text/javascript" src="scripts/jquery-2.1.4.min.js"></script>
 <script type="text/javascript" src="scripts/mmenu.min.js"></script>
 <script type="text/javascript" src="scripts/global.js"></script>
-
 </html>
