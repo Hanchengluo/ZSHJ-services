@@ -178,6 +178,9 @@ img#loading{ vertical-align:middle; margin:0 0.5em; display:none;}
 .coupon.coupon2{ background:#90496c;}
 .coupon.coupon_used{ background:#474f58;}
 .coupon.coupon_used dt{ background-image:url(../images/ico_coupon_used.png);}
+.coupon.coupon_end{ background:#525252;}
+.coupon.coupon_end dt{ background-image:url(../images/ico_coupon_end.png);}
+
 @media screen and (max-width:380px){
    .coupon{ font-size:1em; height:10em; padding:1em 0.5em;}
    .coupon dt{ height:3em; line-height:300%; padding-left:2em; background:auto 3em; width:43%}
