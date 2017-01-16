@@ -1,0 +1,193 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=false">
+<title>网上订票--中山火炬公共文化服务</title>
+<meta name="keywords" content="中山火炬公共文化服务,文化活动,文体活动,文化馆,图书馆,博物馆,广场文化,公园文化,公共艺术,地方特色文化,戏剧表演,体育场地">
+<meta name="description" content="化时代">
+<link href="css/mmenu.css" rel="stylesheet" type="text/css">
+<link href="css/global.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+  #ticket dl dt{
+    padding-bottom: 68% !important;
+  }
+  #ticket dl dd{
+    background:#7d0022;
+  }
+  #ticket dl dd p{
+    text-align: center;
+    line-height: 120%;
+    height: 1.5rem;
+    font-size: 1.2em;
+    margin-bottom: .2em;
+  }
+  #ticket dl dd .btn{
+    display: inline-block;
+    background-color: #d40038;
+    border: none;
+    color: #fff;
+    padding: 0.3em 2rem;
+    border-radius: 5px;
+    margin: .5rem auto;
+    font-size: 1.2em;
+  }
+  #show_vote{
+    display: block;
+    position: relative;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 250%;
+    width: 98%;
+    margin: 0 auto;
+    cursor: hand;
+    cursor: pointer;
+    background: #d40038;
+    color: #fff;
+    border-radius: 0.2em;
+  }
+  #fixed_box{
+    position:fixed;
+    bottom: 0;
+    padding: .5em 0;
+    width: 100%;
+    background:#960028;
+  }
+  #vote_number{
+    background: #7d0022;
+    width: 100%;
+    height: 5em;
+  }
+  #vote_number li{
+    float: left;
+    width: 33.333%;
+    padding: .5em 0;
+  }
+  #vote_number li p{
+    text-align: center;
+    color: #fff;
+    margin:0 4px;
+    font-size: 1.2em;
+  }
+  #vote_number .br{
+    border-right: #590018 solid 1px;
+  }
+  #describe{
+    margin: 5px auto;
+    background:#7d0022;
+    color: #fff;
+    padding: 4px 6px;
+    font-size: 1.3em;
+  }
+</style>
+</head>
+
+<body style="background:#960028;padding-bottom:40px">
+<div class="vote_banner global_width">
+  <img src="pictures/huoda-banner.png" alt="">
+</div>
+<div id="vote_number" class="global_width">
+  <ul>
+    <li class="br">
+      <p class="text">参与队伍</p>
+      <p class="number">23</p>
+    </li>
+    <li class="br">
+      <p class="text">累积投票</p>
+      <p class="number">23</p>
+    </li>
+    <li>
+      <p class="text">访问量</p>
+      <p class="number">23</p>
+    </li>
+  </ul>
+</div>
+<div id="describe" class="global_width">
+  这是描述：传承中华传统文化之内涵，续写现代文化产品之传奇。公司择名“京德”，与我们投身高端文化事业有关，通过视频营销服务企业，回报社会的宗旨相契合。中国古代文化讲求“知行合一”，追求知中有行，行中有知，由此造就了自强不息、追求卓越的企业精神。京德传承这一文化精神，以知为行，知决定行，全面实现企业价值最大化与社会效益最大化的和谐统一
+  <br>
+  国古代文化讲求“知行合一”，追求知中有行，行中有知，由此造就了自强不息、追求卓越的企业精神 。京德传承这一文化精神，以知为行，知决定行，全面实现企业价值最大化与社会效益最大化的和谐统一
+</div>
+<div class="global_width" id="ticket">
+  <dl>
+    <dt><p><img src="pictures/vote01.jpg"/></p></dt>
+    <dd>
+      <p>民间歌舞团</p>
+      <p>所得票数：234票</p>
+      <div style="text-align: center;"><button class="btn">投票</button></div>
+    </dd>
+  </dl>
+  <dl>
+    <dt><p><img src="pictures/vote01.jpg" /></p></dt>
+    <dd>
+      <p>民间歌舞团</p>
+      <p>所得票数：234票</p>
+      <div style="text-align: center;"><button class="btn">投票</button></div>
+    </dd>
+  </dl>
+  <dl>
+    <dt><p><img src="pictures/vote01.jpg" /></p></dt>
+    <dd>
+      <p>民间歌舞团</p>
+      <p>所得票数：234票</p>
+      <div style="text-align: center;"><button class="btn">投票</button></div>
+    </dd>
+  </dl>
+  <dl>
+    <dt><p><img src="pictures/vote01.jpg" /></p></dt>
+    <dd>
+      <p>民间歌舞团</p>
+      <p>所得票数：234票</p>
+      <div style="text-align: center;"><button class="btn">投票</button></div>
+    </dd>
+  </dl>
+</div>
+<div class="blank"></div>
+<div id="fixed_box">
+  <a id="show_vote" class="global_width" href="ifname-voteinfo.html">查看排名</a>
+</div>
+</body>
+<script type="text/javascript" src="scripts/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="scripts/mmenu.min.js"></script>
+<script type="text/javascript" src="scripts/global.js"></script>
+<script type="text/javascript">
+/*ajax加载数据*/
+var page;
+var content = $('#ticket');
+var nodata = false;
+var iCategoryId = $.getUrlParam('iCategoryId'); //取得分类ID
+$(function(){
+  $('#loadMore').bind('click',function(){
+    if(nodata){return false};
+    page = parseInt($(this).attr('data-page'))+1;//页数
+    $('#loading').fadeIn('fast');
+    $('#load_span').html('数据加载中...');
+    ajaxRead();
+  });
+
+  function ajaxRead(){
+  var Thehtml='';
+  var ajaxurl='ticket_ajax.asp?iCategoryId='+iCategoryId+'&page='+page;//请求数据的页面
+  $.ajax({
+    type: 'POST',
+    url: ajaxurl,
+    async: false,
+    datatype: 'json',
+    success:function(data){
+      if(data!='' && data!='0' && data!=null && data.replace(/\s/g,"")!=null){
+        content.append(data);
+        $('#loadMore').attr('data-page',page);
+        //alert($('#loadMore').attr('data-page'));
+        $('#loading').fadeOut('fast');
+        $('#load_span').html('加载更多');
+      }else{
+          $('#loading').fadeOut('fast',function(){$("#load_span").empty().html('没有数据了！')});
+          nodata = true;
+        }
+    },
+    error: function(err) { $("#load_span").empty().html('数据请求失败！')}
+  });
+  }
+
+})
+</script>
+</html>
