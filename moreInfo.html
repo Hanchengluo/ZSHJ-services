@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=false">
+<title>订票详情--中山火炬公共文化服务</title>
+<meta name="keywords" content="中山火炬公共文化服务,文化活动,文体活动,文化馆,图书馆,博物馆,广场文化,公园文化,公共艺术,地方特色文化,戏剧表演,体育场地">
+<meta name="description" content="化时代">
+<link href="css/mmenu.css" rel="stylesheet" type="text/css">
+<link href="css/global.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div id="top" class="global_width2 ">
+  <span class="top_title">赛事介绍</span><a class="topIco" href="ticketInfo.html"></a>
+</div>
+<div class="content_box">
+  <div class="global_width2 box border1px">
+    <div class="column">
+      <h2>赛事看点</h2>
+      <p>剑指六年第四冠！</p>
+      <p>“老马”伏枥，志在千里！</p>
+      <p>北京王朝，不只是过去！</p>
+    </div>
+    <div class="column">
+      <h2>赛事介绍</h2>
+      <div><img src="pictures/ticket-intro04.jpg"></div>
+      <p>为了实现闯进季后赛的计划，青岛队在今年夏天引进了多名有实力的本土球员，再加上技术全面的琼斯和贝尼蒙这两位外援加盟，青岛队正稳步向着季后赛迈进。
+2015-2016赛季，青岛队在38场常规赛中以16胜22负的战绩排名联盟20支球队的第14位，胜率为42%。球队之中的小外援吉布森以场均42分加冕CBA得分王，同时他还有6.7篮板和5.1助攻入账;大外援威廉姆斯以场均15.4个篮板荣膺篮板王，他场均贡献20.8分。
+　　国内球员之中，当属张驰宇最引人关注，他上赛季场均贡献14.2分，是球队之中唯一一个场均得分上双的球员，同时他还有3篮板和2.5助攻入账。另外，队中老将孙杰的作用不容小视，2012-2013赛季结束后，孙杰离开山东男篮，到NBL打了两个赛季。去年夏天，他加盟青岛双星男篮，上赛季场均出战26分钟，得到7.6分、1.5篮板、1.3助攻。
+　　上赛季结束后，青岛双星男篮进行了一系列的人员调整：陈开选择退役，唐海加盟浙江队，张耀升则到NBL打球，合同到期的罗旭东改投新疆队。由于球员流失严重，青岛双星男篮多方积极努力联系，争取再引进优秀的内线球员，以弥补球队的内线空缺。</p>
+    </div>
+  </div>
+</div> 
+<div id="foot" class="global_width">
+  <a class=" btn_foot btn_big" href="ticketSeat.html">立即购买</a>
+</div>
+
+<!--导航菜单-->
+<nav id="menu" class="hide">
+  <ul>
+    <li><a href="index.html">文体活动</a>
+      <ul>
+        <li><a href="index.html">文体活动首页</a></li>
+        <li><a href="theater.html">戏剧表演</a></li>
+        <li><a href="sports.html">体育赛事</a></li>
+      </ul>
+    </li>
+    <li><a href="#">便民服务</a>
+        <ul>
+            <li><a href="publicService.html">公共服务</a></li>
+            <li><a href="about.html">关于我们</a></li>
+            <li><a href="#">公益培训</a></li>
+            <li><a href="survey.html">在线调查</a></li>
+        </ul>
+    </li>
+    <li><a href="#">福利来了</a>
+      <ul>
+        <li><a href="coupons.html">我要抢券</a></li>
+        <li><a href="culturalPro.html">文化产品</a></li>
+        <li><a href="loginChoose.html">会员登录</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+</body>
+<script type="text/javascript" src="scripts/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="scripts/mmenu.min.js"></script>
+<script type="text/javascript" src="scripts/global.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  /*时间*/
+  $('.selectBut.active').each(function() {
+    var targetInput = $('#'+$(this).attr('rel'));
+	targetInput.val($(this).html());
+  });
+
+  $('.selectBut').click(function(index, element) {
+    $(this).addClass('active').siblings().removeClass('active');
+	var targetInput = $('#'+$(this).attr('rel'));
+	targetInput.val($(this).html());
+  });
+
+
+});
+</script>
+</html>

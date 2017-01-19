@@ -15,11 +15,11 @@
 <div id="head" class="global_width">
   <a class="headIco" id="ico_menu" href="#menu"><i class="VMiddle"></i></a>
   <a class="headIco" id="ico_back" title="返回上一页" onclick="javascript:history.go(-1);"><i class="VMiddle"></i></a>
-  <div id="pageTitle">订票详情</div>
+  <div id="pageTitle">订单确认</div>
 </div>
 
-<div class="content_box">
-  <div class="global_width2 box box_bg">
+<div class="content_box mar8">
+  <div class="global_width2 box box_bg" style="margin-bottom:0;">
     <div id="ticketInfo_pic"><img src="pictures/ticket-cover.jpg"/></div>
     <div id="ticketInfo_cs">
       <h2>2016-2017赛季CBA常规赛青岛潍坊高新主场比赛 
@@ -27,38 +27,30 @@
       <h3>时间：2017-01-12<br>
         场馆：青岛市体育中心国信体育馆
       </h3>
-      <span class="highlight">￥50起</span>
-      <div>
-        <div class="ticket_tips">售票中</div>
-        <div class="icon_seat"><span></span>座位图</div>
-      </div>
     </div>
   </div>
-  <div id="shade"></div>
-  <div id="seat_pic"><img src="pictures/seat-pic.jpg"></div>
-  <div class="global_width2 box border1px">
-    <div class="title">赛事介绍</div>
-    <div class="ticket_pic">
-      <ul>
-        <li><img src="pictures/ticket-intro01.jpg"></li>
-        <li><img src="pictures/ticket-intro02.jpg"></li>
-        <li><img src="pictures/ticket-intro03.jpg"></li>
-      </ul>
-    </div> 
-    <p>为了实现闯进季后赛的计划，青岛队在今年夏天引进了多名有实力的本土球员，再加上技术全面的琼斯和贝尼蒙这两位外援加盟，青岛队正稳步向着季后赛迈进。</p>
-    <div class="more"><a href="moreInfo.html">更多介绍</a></div>
+  <div class="global_width2 titconfirm_bg">
+    <div class="listInfo">
+      <li>1张<span style="float:right;">50元</span></li>
+      <li>A区201 </li>
+    </div>
+  </div>
+  <div class="global_width2 box border1px mar8">
+    <div class="title">购票人信息</div>
+    <div class="listInfo">
+      <li class="border_bottom1px"><i>姓名</i>雷某某</li>
+      <li><i>手机号码</i>18348032841 </li>
+    </div>
   </div>
   <div class="global_width2 box border1px">
-    <div class="title">购票须知</div>
-    <p>· 全价票：1.5米以上、65岁以下、无证件购票者。</p>
-    <p>· 半票价：6周岁（不含6周岁）—18周岁（含18周岁）未成年人、全日制在校大学本科及以下学历学生，凭本人学生证购票（不包含成人院校学生）</p>
-    <p>· 半票价：6周岁（不含6周岁）—18周岁（含18周岁）未成年人、全日制在校大学本科及以下学历学生，凭本人学生证购票（不包含成人院校学生）</p>
+    <div class="listInfo">
+      <li class="alipay"><em class="icon_alipay"></em>支付宝支付</li>
+    </div>
   </div>
 </div> 
-
-
-<div id="foot" class="global_width">
-  <a class="btn_foot btn_big" href="ticketSeat.html">立即购买</a>
+<div id="foot" class="global_width border_top1px">
+  <div class="price">总价:<span>10</span>元</div>
+  <a class="btn_foot btn_small" href="">确认订单</a>
 </div>
 
 <!--导航菜单-->
@@ -106,13 +98,7 @@ $(document).ready(function(){
 	var targetInput = $('#'+$(this).attr('rel'));
 	targetInput.val($(this).html());
   });
-  /*显示/隐藏*/
-  $("#shade").click(function(){
-    $("#seat_pic,#shade").hide();
-    });
-    $(".icon_seat").click(function(){
-    $("#seat_pic,#shade").show();
-    });
+
 
 });
 </script>

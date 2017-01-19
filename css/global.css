@@ -247,5 +247,65 @@ a.menberAvatar{ display:inline-block; width:35%; height:0; padding-bottom:35%; o
 #integral li a{ font-size:1.3em; color:#bb496c;}
 #integral li span{ color:#1071e0;}
 
+/* 购票、场地预订 */
+#ticketInfo_pic{width: 35%;}
+#ticketInfo_cs{width: 63%;margin-top: 1em 0 0 0 ;}
+#ticketInfo_cs h2{margin:0;}
+#ticketInfo_cs h3{margin:  0;}
+.content_box{margin-bottom: 4em;}
+.content_box p{font-size: 1.2em;margin:0;padding: 0.4em 0;}
+.box_bg{background: url(../images/ticket-bg.png) no-repeat center;background-size:cover;}
+.ticket_tips{float: left;padding: 0.1em;border: 1px solid #1f97ed;border-radius: 2px;color: #1f97ed;}
+.icon_seat{float: right;padding: 0.1em;border-radius: 2px;background:rgba(0,0,0,0.4);color: #fff;}
+.icon_seat span{display:inline-block;width: 18px;height: 17px;background: url(../images/seat.png);vertical-align: middle;margin:0 3px;}
+.title{font-size: 1rem;text-align: left;border-bottom: 1px solid #c8c8c8;padding: 0.8em 0;}
+.border1px{border-top: 1px solid #c8c8c8;border-bottom: 1px solid #c8c8c8;}
+.border_bottom1px{border-bottom: 1px solid #c8c8c8;}
+.border_top1px{border-top: 1px solid #c8c8c8;}
+.ticket_pic{overflow: hidden; padding-top: 0.8em;}
+.ticket_pic li{width: 32%;float: left;margin:0 0.39em 0 0;}
+.ticket_pic img{margin: 0;}
+.more{ text-align:center; display:block;padding-bottom: 0.8em;}
+.more a:visited{color: #1f97ed;}
+#foot{position:fixed;bottom: 0; height: 4em;background: #fff;}
+#foot a:visited{color: #fff;}
+.btn_foot{display:block;font-size: 1rem;text-align:center;color: #fff; line-height:300%;background: #1f97ed;}
+.btn_big{width: 100%;}
+.btn_small{width: 40%;float: right;}
+#top{background: #fff;padding: 0.8em;}
+.top_title{font-size: 1rem;}
+.topIco{display:inline-block;background: url(../images/guanbi.png) center center no-repeat;width: 2em; height: 2em; background-size: 50%;float: right;}
+.column h2{border-left: 5px solid #1f97ed;padding-left: 5px;font-weight:normal;font-size: 1rem;}
+.column p{margin:0 0 0.8em 0;padding:0;}
+.ticket_name{font-size: 0.8rem;background: #fff;padding:0.4em 0.8em;}
+.tab li{width: 3.5em;height: 0.8em;}
+.mar8{margin-top: 0.8em;}
+.listInfo li{padding: 0.8em 0; font-size: 1.2em;}
+.listInfo span{color: #bb496c;}
+.listInfo i{display:inline-block;color: #999999;font-style: normal;width: 21%;}
+.icon_alipay{display:inline-block;background: url(../images/alipay.png) left center no-repeat;width: 2em; height: 2em; background-size: 100%;float: left;margin-right: 5px;}
+.alipay{background: url(../images/seclect.png)center right no-repeat;background-size: auto 50%;}
+.price{line-height: 300%;font-size: 1rem;float: left;padding-left: 0.8em;}
+.price span{color: #bb496c;}
+.listInfo .selectBut{padding:0 2px;margin:0.8em 1px 0 1px;}
+.book_time{background: url(../images/arrow-time.png)center right no-repeat;background-size: auto 30%;}
+.tab{padding:0.8em 0;}
+.swiper-wrapper .active{background: #1f97ed;color: #fff;border:0;}
+.swiper-container {padding: 0.8em 0;}
+.swiper-slide {text-align: center;background: #fff;width: 50% !important;border: 1px solid #c8c8c8;border-radius: 5px;padding:1em 0;}
+.swiper-slide:nth-child(2n) {width: 40%;}
+.swiper-slide:nth-child(3n) {width: 20%;}
+.area .tit{border:0;border-radius: 5px;padding:0;overflow: hidden;}
+.area .tit i{display: inline-block;background: url(../images/arrow-sanjiao.png);height: 0.8em;width: 2.6em;position: absolute;top:-0.6em;left: 15%;}
+.area a{border-radius: 5px;}
+.point{text-align: left;overflow: hidden;float: left;padding:0.5em 0 0.8em 0.4em;}
+.point span{line-height: 1;}
+.point_selt{display:inline-block;height: 0.8em;width: 1.2em;background: #1f97ed;float: left;border-radius: 2px;}
+.point_unselt{display:inline-block;height: 0.8em;width: 1.2em;background: #c8c8c8;float: left;border-radius: 2px;}
+.point_txt{float: left;font-size: 0.4rem;color: #474f58;padding-left:5px;}
+.titconfirm_bg{background: url(../images/titconfirm-bg.png)center no-repeat;background-size:cover;}
+#shade{width: 100%;height: 100%;background: rgba(0,0,0,0.6);position: fixed;top: 0;z-index: 99;display: none;}
+#seat_pic{display: none;position: fixed;z-index: 999;background-size: 100%;}
+
 
 
