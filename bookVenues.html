@@ -3,10 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=false">
-<title>场地预定--中山火炬公共文化服务</title>
+<title>订票详情--中山火炬公共文化服务</title>
 <meta name="keywords" content="中山火炬公共文化服务,文化活动,文体活动,文化馆,图书馆,博物馆,广场文化,公园文化,公共艺术,地方特色文化,戏剧表演,体育场地">
 <meta name="description" content="化时代">
 <link href="css/mmenu.css" rel="stylesheet" type="text/css">
+<link href="css/swiper.min.css" rel="stylesheet" type="text/css">
 <link href="css/global.css" rel="stylesheet" type="text/css">
 <link href="css/mobiscroll.css" rel="stylesheet" type="text/css">
 </head>
@@ -16,52 +17,59 @@
 <div id="head" class="global_width">
   <a class="headIco" id="ico_menu" href="#menu"><i class="VMiddle"></i></a>
   <a class="headIco" id="ico_back" title="返回上一页" onclick="javascript:history.go(-1);"><i class="VMiddle"></i></a>
-  <div id="pageTitle">场地预定</div> 
+  <div id="pageTitle">场地预订</div>
 </div>
 
-<div class="global_width" id="globalForm">
- <form action="#">
-    <table width="100%" border="0" bordercolor="#000" frame="hsides" cellspacing="0" cellpadding="0" class="tb">
-      <tr>
-        <td width="80" align="right"><span>预订场地</span></td>
-        <td>英雄传说搏击主题馆</td>
-      </tr>
-      <tr>
-        <td align="right"><span>预订时间</span></td>
-        <td><input name="dueDate" type="text" id="dueDate" class="getdate"></td>
-      </tr>
-      <tr>
-        <td align="right" valign="top"><span>选择时间</span></td>
-        <td>
-          <a class="selectBut" rel="timeInterval">10:00-12:00</a><a class="selectBut active" rel="timeInterval">14:00-16:00</a><a class="selectBut" rel="timeInterval">18:00-20:00</a>
-          <input type="hidden" id="timeInterval" name="timeInterval">
-        </td>
-      </tr>
-    </table>
-    <table width="100%" border="0" bordercolor="#000" frame="hsides" cellspacing="0" cellpadding="0" class="tb">
-      <tr>
-        <td colspan="2" class="highlight">预订人：请如实填写预订人信息，入场将凭身份证实名入场</td>
-      </tr>
-      <tr>
-        <td width="80" align="right"><span>预订人</span></td>
-        <td><input type="text" name="name" id="name" placeholder="请输入真实姓名"></td>
-      </tr>
-      <tr>
-        <td align="right"><span>手机号码</span></td>
-        <td><input type="text" name="phone" id="phone" placeholder="请输入个人手机号码"></td>
-      </tr>
-      <tr>
-        <td align="right"><span>身份证</span></td>
-        <td>
-          <input type="text" id="IDNumber" name="IDNumber" placeholder="请输入身份证">
-        </td>
-      </tr>
-      <tr>
-        <td colspan="2"><input name="readed" type="radio">我已认真阅读<a href="Notice.html" class="blue">预订须知</a></td>
-      </tr>
-    </table>
-    <p><input type="submit" value="立即预定" class="btn1"></p>
-  </form>
+<div class="content_box">
+  <div class="ticket_name global_width2">羽毛球馆
+  </div>
+  <div class="global_width2">
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide active">A区</div>
+            <div class="swiper-slide">B区</div>
+            <div class="swiper-slide">C区</div>
+            <div class="swiper-slide">D区</div>
+            <div class="swiper-slide">E区</div>
+            <div class="swiper-slide">F区</div>
+        </div>
+    </div>
+    <div class="area mar8">
+      <div class="tit global_width"><i></i>
+        <a href="#" class="curr">1号场地</a><a href="#">2号场地</a><a href="#">3号场地</a>
+        <a href="#">4号场地</a><a href="#">5号场地</a><a href="#">6号场地</a>
+        <a href="#">7号场地</a><a href="#">8号场地</a><a href="#">9号场地</a>
+        <a href="#">10号场地</a><a href="#">11号场地</a><a href="#">12号场地</a>
+        <div class="point"><span class="point_selt"></span><span class="point_txt">选定</span></div>
+        <div class="point"><span class="point_unselt"></span><span class="point_txt">不可选</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="global_width2 box border1px">
+    <div class="listInfo">
+      <li class="book_time border_bottom1px getdate"><i>预订时间</i>2017-01-12</li>
+      <li><i>选择时间段</i><br>
+        <tr>
+          <td>
+            <a class="selectBut" rel="timeInterval">08:00-10:00</a><a class="selectBut active" rel="timeInterval">10:00-12:00</a><a class="selectBut" rel="timeInterval">14:00-16:00</a><a class="selectBut" rel="timeInterval">16:00-18:00</a>
+            <input type="hidden" id="timeInterval" name="timeInterval">
+          </td>
+        </tr>
+      </li>
+    </div>
+  </div>
+  <div class="global_width2 box border1px">
+    <div class="title">预订人信息</div>
+    <div class="listInfo">
+      <li class="border_bottom1px"><i>姓名</i><input type="text" name="name" id="name" value="雷某某" placeholder="请输入真实姓名"></li>
+      <li><i>手机号码</i><input type="number" name="mobileCode" id="phoneCode" value="18348032841" placeholder="请输入手机号码"> </li>
+    </div>
+  </div>
+</div> 
+<div id="foot" class="global_width border_top1px">
+  <div class="price">总价:<span>10</span>元</div>
+  <a class="btn_foot btn_small" href="areaConfirm.html">下一步</a>
 </div>
 
 <!--导航菜单-->
@@ -97,6 +105,19 @@
 <script type="text/javascript" src="scripts/mmenu.min.js"></script>
 <script type="text/javascript" src="scripts/global.js"></script>
 <script type="text/javascript" src="scripts/mobiscroll.js"></script>
+
+<!-- Swiper JS -->
+<script src="scripts/swiper.jquery.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+var mySwiper = new Swiper('.swiper-container',{
+  loop : false,
+  slidesPerView : 'auto',
+  loopedSlides :3,
+  spaceBetween: 10
+})
+</script>
 <script type="text/javascript">
 $(document).ready(function(){
   /*时间*/
@@ -104,29 +125,29 @@ $(document).ready(function(){
     var targetInput = $('#'+$(this).attr('rel'));
 	targetInput.val($(this).html());
   });
-  
+
   $('.selectBut').click(function(index, element) {
-    $(this).addClass('active').siblings().removeClass('active'); 
+    $(this).addClass('active').siblings().removeClass('active');
 	var targetInput = $('#'+$(this).attr('rel'));
 	targetInput.val($(this).html());
   });
- 
   /*日期选择*/
   var now = new Date();
   $('.getdate').val(now.getFullYear()+'-'+[now.getMonth()+1]+'-'+now.getDate());
   $('.getdate').mobiscroll().date({
-	  theme: 'android-holo-light',
-	  lang: 'zh',
-	  display: 'modal',
-	  mode: 'scroller',
-	  //headerText: false,
-	  showNow: true,
-	  nowText: '今天',
-	  dateFormat: 'yy-mm-dd',
-	  minDate: new Date(2015, 10, 12),  // 根据开放日设定日期区间，月份要减1
+    theme: 'android-holo-light',
+    lang: 'zh',
+    display: 'modal',
+    mode: 'scroller',
+    //headerText: false,
+    showNow: true,
+    nowText: '今天',
+    dateFormat: 'yy-mm-dd',
+    minDate: new Date(2015, 10, 12),  // 根据开放日设定日期区间，月份要减1
       maxDate: new Date(2015, 11, 21)
   });
-  
+
+
 });
 </script>
 </html>

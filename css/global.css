@@ -249,7 +249,7 @@ a.menberAvatar{ display:inline-block; width:35%; height:0; padding-bottom:35%; o
 
 /* 购票、场地预订 */
 #ticketInfo_pic{width: 35%;}
-#ticketInfo_cs{width: 63%;margin-top: 1em 0 0 0 ;}
+#ticketInfo_cs{width: 63%;margin-bottom: 1em;}
 #ticketInfo_cs h2{margin:0;}
 #ticketInfo_cs h3{margin:  0;}
 .content_box{margin-bottom: 4em;}
@@ -263,7 +263,7 @@ a.menberAvatar{ display:inline-block; width:35%; height:0; padding-bottom:35%; o
 .border_bottom1px{border-bottom: 1px solid #c8c8c8;}
 .border_top1px{border-top: 1px solid #c8c8c8;}
 .ticket_pic{overflow: hidden; padding-top: 0.8em;}
-.ticket_pic li{width: 32%;float: left;margin:0 0.39em 0 0;}
+.ticket_pic li{width: 32%;float: left;margin:0 0.33em 0 0;}
 .ticket_pic img{margin: 0;}
 .more{ text-align:center; display:block;padding-bottom: 0.8em;}
 .more a:visited{color: #1f97ed;}
@@ -282,6 +282,7 @@ a.menberAvatar{ display:inline-block; width:35%; height:0; padding-bottom:35%; o
 .mar8{margin-top: 0.8em;}
 .listInfo li{padding: 0.8em 0; font-size: 1.2em;}
 .listInfo span{color: #bb496c;}
+.listInfo input{border: none;}
 .listInfo i{display:inline-block;color: #999999;font-style: normal;width: 21%;}
 .icon_alipay{display:inline-block;background: url(../images/alipay.png) left center no-repeat;width: 2em; height: 2em; background-size: 100%;float: left;margin-right: 5px;}
 .alipay{background: url(../images/seclect.png)center right no-repeat;background-size: auto 50%;}
@@ -303,7 +304,7 @@ a.menberAvatar{ display:inline-block; width:35%; height:0; padding-bottom:35%; o
 .point_selt{display:inline-block;height: 0.8em;width: 1.2em;background: #1f97ed;float: left;border-radius: 2px;}
 .point_unselt{display:inline-block;height: 0.8em;width: 1.2em;background: #c8c8c8;float: left;border-radius: 2px;}
 .point_txt{float: left;font-size: 0.4rem;color: #474f58;padding-left:5px;}
-.titconfirm_bg{background: url(../images/titconfirm-bg.png)center no-repeat;background-size:cover;}
+.titconfirm_bg{background: url(../images/titconfirm-bg.png)center no-repeat;background-size:100% 100%;}
 #shade{width: 100%;height: 100%;background: rgba(0,0,0,0.6);position: fixed;top: 0;z-index: 99;display: none;}
 #seat_pic{display: none;position: fixed;z-index: 999;background-size: 100%;}
 
