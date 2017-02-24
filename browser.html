@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=false">
+<title>订票详情--中山火炬公共文化服务</title>
+<meta name="keywords" content="中山火炬公共文化服务,文化活动,文体活动,文化馆,图书馆,博物馆,广场文化,公园文化,公共艺术,地方特色文化,戏剧表演,体育场地">
+<meta name="description" content="化时代">
+<link href="css/mmenu.css" rel="stylesheet" type="text/css">
+<link href="css/global.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="bg-hei">
+<!-- 页头 -->
+
+<div class="content_box">
+  <div class="browser-img"><img src="images/browser-tip.png" ></div>
+</div> 
+
+</body>
+<script type="text/javascript" src="scripts/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="scripts/mmenu.min.js"></script>
+<script type="text/javascript" src="scripts/global.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  /*时间*/
+  $('.selectBut.active').each(function() {
+    var targetInput = $('#'+$(this).attr('rel'));
+	targetInput.val($(this).html());
+  });
+
+  $('.selectBut').click(function(index, element) {
+    $(this).addClass('active').siblings().removeClass('active');
+	var targetInput = $('#'+$(this).attr('rel'));
+	targetInput.val($(this).html());
+  });
+  /*显示/隐藏*/
+  $("#shade").click(function(){
+    $("#seat_pic,#shade").hide();
+    });
+    $(".icon_seat").click(function(){
+    $("#seat_pic,#shade").show();
+    });
+
+});
+</script>
+</html>
