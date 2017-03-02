@@ -60,6 +60,26 @@
     </div>
   </div>
   <div class="global_width2 box border1px">
+    <div class="listInfo">
+      <li id="coupon-arrow" class="book_time"><i>代金券</i>2元代金券</li>
+    </div>
+  </div>
+  <div id="coupon-shade"></div>
+  <div id="coupon-select" class="global_width2 box border1px">
+    <div class="title">代金券</div>
+    <div class="listInfo">
+      <li class="border_bottom1px">2元代金券
+        <input id="coupon-radio" name="radio"value="Item 1" type="radio" checked>
+      </li>
+      <li class="border_bottom1px">5元代金券 
+        <input id="coupon-radio" name="radio" type="radio" checked>
+      </li>
+    </div>
+    <div class="global_width">
+      <a id="btn-close" class="btn1">关闭</a>
+    </div>    
+  </div>
+  <div class="global_width2 box border1px">
     <div class="title">预订人信息</div>
     <div class="listInfo">
       <li class="border_bottom1px"><i>姓名</i><input type="text" name="name" id="name" value="雷某某" placeholder="请输入真实姓名"></li>
@@ -149,5 +169,15 @@ $(document).ready(function(){
 
 
 });
+
+$(document).ready(function(){
+  $("#coupon-shade,#btn-close,#coupon-radio").click(function(){
+  $("#coupon-select,#coupon-shade").hide();
+  });
+  $("#coupon-arrow").click(function(){
+  $("#coupon-select,#coupon-shade").show();
+  });
+});
+
 </script>
 </html>
