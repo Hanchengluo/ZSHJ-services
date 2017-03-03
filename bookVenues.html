@@ -59,6 +59,8 @@
       </li>
     </div>
   </div>
+
+  <!--代金券-->  
   <div class="global_width2 box border1px">
     <div class="listInfo">
       <li id="coupon-arrow" class="book_time"><i>代金券</i>2元代金券</li>
@@ -76,9 +78,32 @@
       </li>
     </div>
     <div class="global_width">
-      <a id="btn-close" class="btn1">关闭</a>
+      <a class="btn1 btn-close">关闭</a>
     </div>    
   </div>
+
+  <!--优惠券-->  
+  <div class="global_width2 box border1px">
+    <div class="listInfo">
+      <li id="cash-arrow" class="book_time"><i>优惠券</i>2元优惠券</li>
+    </div>
+  </div>
+  <div id="cash-shade"></div>
+  <div id="cash-select" class="global_width2 box border1px">
+    <div class="title">优惠券</div>
+    <div class="listInfo">
+      <li class="border_bottom1px">2元优惠券
+        <input class="cash-radio" name="radio"value="Item 1" type="radio" checked>
+      </li>
+      <li class="border_bottom1px">5元优惠券 
+        <input class="cash-radio" name="radio" type="radio" checked>
+      </li>
+    </div>
+    <div class="global_width">
+      <a class="btn1 btn-close">关闭</a>
+    </div>    
+  </div>
+
   <div class="global_width2 box border1px">
     <div class="title">预订人信息</div>
     <div class="listInfo">
@@ -171,11 +196,19 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
-  $("#coupon-shade,#btn-close,.coupon-radio").click(function(){
+  $("#coupon-shade,.btn-close,.coupon-radio").click(function(){
   $("#coupon-select,#coupon-shade").hide();
   });
   $("#coupon-arrow").click(function(){
   $("#coupon-select,#coupon-shade").show();
+  });
+});
+$(document).ready(function(){
+  $("#cash-shade,.btn-close,.cash-radio").click(function(){
+  $("#cash-select,#cash-shade").hide();
+  });
+  $("#cash-arrow").click(function(){
+  $("#cash-select,#cash-shade").show();
   });
 });
 
