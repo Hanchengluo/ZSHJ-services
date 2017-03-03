@@ -69,10 +69,10 @@
     <div class="title">代金券</div>
     <div class="listInfo">
       <li class="border_bottom1px">2元代金券
-        <input id="coupon-radio" name="radio"value="Item 1" type="radio" checked>
+        <input class="coupon-radio" name="radio"value="Item 1" type="radio" checked>
       </li>
       <li class="border_bottom1px">5元代金券 
-        <input id="coupon-radio" name="radio" type="radio" checked>
+        <input class="coupon-radio" name="radio" type="radio" checked>
       </li>
     </div>
     <div class="global_width">
@@ -171,7 +171,7 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
-  $("#coupon-shade,#btn-close,#coupon-radio").click(function(){
+  $("#coupon-shade,#btn-close,.coupon-radio").click(function(){
   $("#coupon-select,#coupon-shade").hide();
   });
   $("#coupon-arrow").click(function(){
